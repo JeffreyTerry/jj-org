@@ -1,0 +1,77 @@
+@import ../global
+
+body
+  background-color: #028482
+  background-image: url('/imgs/paper_fibers.png')
+  font-family: opensans
+
+.person
+  display: block
+  width: 100px
+  position: absolute
+  top: calc(50% - 50px)
+
+.jeff
+  @extend .person
+  right: 20px
+
+.jordan
+  @extend .person
+  left: 20px
+
+.box
+  height: 80px
+  color: white
+  text-align: center
+  font-family: 'Poiret One'
+  position: absolute
+  left: 0
+  right: 0
+  font-size: 52px
+  @media(max-width: 768px)
+    font-size: 32px
+    height: 60px
+
+.clock-box
+  @extend .box
+  top: calc(50% + 100px)
+  @media(max-width: 768px)
+    top: calc(50% + 70px)
+
+#clock
+  width: 400px
+  max-width: calc(100% - 40px)
+  margin: 0 auto
+  background-color: #ff7f50
+  +border-radius(5px)
+
+.title-box
+  @extend .box
+  top: calc(50% - 180px)
+  @media(max-width: 768px)
+    top: calc(50% - 120px)
+
+#title
+  width: 400px
+  max-width: calc(100% - 40px)
+  margin: 0 auto
+  background-color: #ff7f50
+  +border-radius(5px)
+
+.measure
+  position: absolute
+  top: calc(50% - 50px)
+  margin: auto
+  width: calc(100% - 280px)
+  left: 140px
+
+.measure > svg
+  float: left
+  &:nth-child(1)
+    margin-top: 32px
+  &:nth-child(2)
+    margin-top: 50px
+  &:nth-child(3)
+    margin-top: 32px
+
+
