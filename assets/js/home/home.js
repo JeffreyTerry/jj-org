@@ -4,7 +4,6 @@ $(document).ready(function(){
         var theReunion = new Date(2015, 0, 10, 12);
         var now = new Date();
         var difference = theReunion.valueOf() - now.valueOf();
-        difference = 0;
         var scalePercentage = difference / 1182449609;
         var paddingWidth = Math.floor(($window.width() - 234) * (1 - scalePercentage));
         var scaleWidth = Math.ceil(($window.width() - 234) * scalePercentage);
