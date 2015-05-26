@@ -1,10 +1,11 @@
 $(document).ready(function(){
     var theReunion = new Date(2015, 7, 4, 22);
     function resizeDrawing() {
+        var INITIAL_DIFFERENCE_MILLIS = 11714913436;
         var $window = $(window);
         var now = new Date();
         var difference = Math.max(0, theReunion.valueOf() - now.valueOf());
-        var scalePercentage = difference / 1182449609;
+        var scalePercentage = difference / 11714913436;
         var paddingWidth = Math.floor(($window.width() - 234) * (1 - scalePercentage));
         var scaleWidth = Math.ceil(($window.width() - 234) * scalePercentage);
 
