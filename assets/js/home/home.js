@@ -1,7 +1,7 @@
 $(document).ready(function(){
+    var theReunion = new Date(2015, 7, 4, 22);
     function resizeDrawing() {
         var $window = $(window);
-        var theReunion = new Date(2015, 7, 4, 22);
         var now = new Date();
         var difference = Math.max(0, theReunion.valueOf() - now.valueOf());
         var scalePercentage = difference / 1182449609;
@@ -16,7 +16,6 @@ $(document).ready(function(){
     }
     resizeDrawing();
     
-    var theReunion = new Date(2015, 0, 10, 18);
     $('#clock').countdown(theReunion, function (event) {
         $(this).html(event.strftime('%-D days<br>%-Hh %Mm %Ss'));
     });
