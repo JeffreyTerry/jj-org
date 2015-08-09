@@ -1,14 +1,14 @@
 $(document).ready(function(){
-    var theReunion = new Date(2015, 7, 4, 22);
+    var theReunion = new Date(2015, 7, 22, 22);
     function resizeDrawing() {
-        var INITIAL_DIFFERENCE_MILLIS = 11714913436;
+        var INITIAL_DIFFERENCE_MILLIS = 1210136393;
         var $window = $(window);
         var now = new Date();
         var difference = Math.max(0, theReunion.valueOf() - now.valueOf());
-        var scalePercentage = difference / 11714913436;
+        var scalePercentage = difference / INITIAL_DIFFERENCE_MILLIS;
         var paddingWidth = Math.floor(($window.width() - 234) * (1 - scalePercentage));
         var scaleWidth = Math.ceil(($window.width() - 234) * scalePercentage);
-
+        console.log(scalePercentage);
         $('.jordan').css('left', 20 + paddingWidth / 2);
         $('.jeff').css('right', 20 + paddingWidth / 2);
         // $('.measure').css('left', 140 + paddingWidth / 2);
